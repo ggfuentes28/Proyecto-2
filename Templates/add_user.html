@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+</head>
+<body>
+
+ <form method="post">
+
+     <h1>Añade nuevo usuario</h1>
+        <h2> </h2>
+
+        <table border="1" class="dataframe">
+
+        <tbody>
+             {%for campo in CAMPOS_USUARIOS[1:]%}
+          <tr>
+                <th> {{campo}}   </th>
+                    <th> <input type="text" name="campos" /> </th>
+              {%endfor%}
+        </tbody>
+        </table>
+     <h2> </h2>
+     <input type="submit" value="Registrar" />
+
+ </form>
+
+
+</body>
+</html>

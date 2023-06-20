@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+<a href="{{ url_for('your_other_playlist', title=title, username=username) }}"> Lista tus otras Playlists </a>
+
+<table border=".5" class="dataframe">
+    <thead>
+    <h2>Sugerencias para tu nueva Playlist: {{title}}</h2>
+
+    <tr style="text-align: center;">
+
+        {% for campo in CAMPOS_CANCIONES%}
+        <th>{{campo}}</th>
+        {%endfor%}
+        <th>Opciones</th>
+    </thead>
+
+    <tbody>
+
+    {%for cancion in selected%}
+    <tr>
+        {%for campo in CAMPOS_CANCIONES%}
+        <th>{{cancion[campo]}}</th>
+        {%endfor%}
+        <th>
+            <a href="{{ url_for('add_suggested_song', id=cancion['_id'], title=title, username=username, selected_list=selected) }}">
+                Añadir </a></th>
+        {%endfor%}
+    </tbody>
+</table>
+
+
+</body>
+</html>

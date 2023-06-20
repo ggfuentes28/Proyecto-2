@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seleccion al azar de 20 canciones de tu playlist</title>
+</head>
+<body>
+
+<table border=".5" class="dataframe">
+    <thead>
+    <h2>Seleccion al azar de 20 canciones de tu playlist: {{title}}</h2>
+
+    <tr style="text-align: center;">
+
+        <th><h2>Canciones</h2></th>
+        <th><h2>Grupo</h2></th>
+
+    </thead>
+
+    <tbody>
+
+    {%for cancion, grupo in results%}
+    <tr>
+        <th>{{cancion}}</th>
+        <th>{{grupo}}</th>
+        {%endfor%}
+
+
+    </tbody>
+</table>
+
+<h2></h2>
+
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+
+
+</body>
+</html>

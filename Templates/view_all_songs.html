@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Canciones</title>
+</head>
+<body>
+
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+
+<table border=".5" class="dataframe">
+  <thead>
+    <h2>Colección: Canciones</h2>
+
+    <tr style="text-align: center;">
+ <th></th>
+
+        {% for campo in CAMPOS_CANCIONES%}
+           <th>{{campo}}</th>
+        {%endfor%}
+        <th>Opciones</th>
+  </thead>
+
+
+    <tbody>
+
+         {%for cancion in temas%}
+         <tr>
+            <th>{{cancion.index}}</th>
+             {%for campo in CAMPOS_CANCIONES%}
+               <th>{{cancion[campo]}}</th>
+            {%endfor%}
+
+             <th> <a href="{{ url_for('add_selected_song_to_playlist', id=cancion['_id'] ) }}"> Añadir </a> </th>
+         {%endfor%}
+    </tbody>
+                </table>
+
+<h2>    </h2>
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+
+</body>
+</html>

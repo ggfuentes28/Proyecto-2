@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+
+<h2> Tus otras Playlist </h2>
+
+
+<div style="float: left;margin-right:10px">
+    <table border=".5" class="dataframe">
+        <thead>
+        <tr style="text-align: center;">
+            <th><h2>{{results[0]['titulo']}}</h2></th>
+        </thead>
+        <tbody>
+
+        {% for temas in results[0]['canciones']%}
+        <tr>
+            <th>{{temas['trackName']}}</th>
+            {%endfor%}
+
+        </tbody>
+    </table>
+</div>
+
+<div style="float: left">
+    <table border=".5" class="dataframe">
+        <thead>
+        <tr style="text-align: center;">
+            <th><h2>{{results[1]['titulo']}}</h2></th>
+        </thead>
+        <tbody>
+
+        {% for temas in results[1]['canciones']%}
+        <tr>
+            <th>{{temas['trackName']}}</th>
+            {%endfor%}
+
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

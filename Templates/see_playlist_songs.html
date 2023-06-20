@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+<h2><a href="{{ url_for('your_other_playlist', title=title, username=username) }}"> Lista tus otras Playlists </a></h2>
+<h2><a href="{{ url_for('add_many_songs', title=title, username=username) }}"> Carga masiva por genero </a></h2>
+
+<table border=".5" class="dataframe">
+    <thead>
+    <h2>Tus canciones de la Playlist: {{title}}</h2>
+
+    <tr style="text-align: center;">
+
+        {% for campo in CAMPOS_CANCIONES%}
+        <th>{{campo}}</th>
+        {%endfor%}
+        <th>Opciones</th>
+    </thead>
+
+    <tbody>
+
+    {%for result in results%}
+    <tr>
+        {%for campo in CAMPOS_CANCIONES%}
+        <th>{{result[campo]}}</th>
+        {%endfor%}
+        <th><a href="{{ url_for('remove_song', id=result['_id'], title=title, username=username) }}"> Eliminar </a></th>
+        {%endfor%}
+    </tbody>
+</table>
+
+<h2></h2>
+
+
+<h3><a href="http://127.0.0.1:5000/inicio">Volver a Inicio</a></h3>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "6429642043b1bdbd767dbe00"
+  },
+  "titulo": "Rock clasico",
+  "username": "ggfuentes",
+  "canciones": []
+},{
+  "_id": {
+    "$oid": "6429692ff91710cfe60e427b"
+  },
+  "titulo": "Pop español",
+  "username": "ggfuentes",
+  "canciones": [
+    {
+      "_id": {
+        "$oid": "6425b57f6f9e7621c7abc69f"
+      },
+      "artistId": 27373453,
+      "trackName": "Maquillaje",
+      "artistName": "Mecano",
+      "primaryGenreName": "Pop",
+      "collectionName": "Mecano",
+      "trackViewUrl": "https://music.apple.com/us/album/maquillaje/1557912071?i=1557912092&uo=4"
+    },
+    {
+      "_id": {
+        "$oid": "6425b57f6f9e7621c7abc6a2"
+      },
+      "artistId": 27373453,
+      "trackName": "Quiero Vivir en la Ciudad",
+      "artistName": "Mecano",
+      "primaryGenreName": "Pop",
+      "collectionName": "Mecano",
+      "trackViewUrl": "https://music.apple.com/us/album/quiero-vivir-en-la-ciudad/1557912071?i=1557912891&uo=4"
+    }
+  ]
+}]

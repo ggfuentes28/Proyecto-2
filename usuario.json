@@ -1,0 +1,36 @@
+[{
+  "_id": 1,
+  "nombre": "Anónimo",
+  "apellidos": "",
+  "username" : " ",
+  "email": " " },
+
+{
+  "_id": 2,
+  "nombre": "Anónimo2",
+  "apellidos": "",
+  "username" : " ",
+  "email": " " },
+
+{
+  "_id": 3,
+  "nombre": "Anónimo3",
+  "apellidos": "",
+  "username" : " ",
+  "email": " " },
+
+{
+  "_id": 4,
+  "nombre": "Anónimo4",
+  "apellidos": "",
+  "username" : " ",
+  "email": " " },
+
+{
+  "_id": 5,
+  "nombre": "Anónimo5",
+  "apellidos": "",
+  "username" : " ",
+  "email": " " },
+
+]
